@@ -1,0 +1,111 @@
+@font-face {
+    font-family: dastnevis;
+    src: url(font/danstevis.otf);
+}
+@font-face {
+    font-family: Mitra;
+    src: url(font/Far_MitraBd.ttf);
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+    margin: -10px;
+    background-color: #37306B;
+}
+.to-do-app{
+    width: 100%;
+    max-width: 540px;
+    background-color: #D27685;
+    margin: 100px auto 20px;
+    padding: 10px 30px 70px;
+    border-radius: 10px;
+}
+.to-do-app h2{
+    color: #002765;
+    font-family: dastnevis;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-right: 2px;
+}
+.to-do-app h2 img{
+    width: 25px;
+    margin-right: 10px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 10px;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 10px 40px;
+    margin-left: -21px;
+    background: #9E4784;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+#input-box::placeholder{
+    font-family: Mitra;
+}
+ul li{
+    list-style: none;
+    font-size: 17px;
+    font-family: Mitra;
+    padding: 15px 8px 12px 50px;
+    user-select: none;
+    position: relative;
+}
+ul li::before{
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 515px;
+    cursor: pointer;
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(images/checked.png);
+}
+ul li span {
+    position: absolute;
+    right: 460px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+ul li span:hover{
+    background: #edeef0;
+}
